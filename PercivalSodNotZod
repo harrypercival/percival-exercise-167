@@ -56,7 +56,7 @@ public class PercivalMainClass
 	double subTotal = 0.0;
 	double tax = 0.0;
 	double totalCost = 0.0;
-	int	memberCount = 0;
+	int    memberCount = 0;
 	int seniorCount = 0;
 	int noDiscountCount = 0;
 	double grandTotal = 0.0;
@@ -81,65 +81,65 @@ public class PercivalMainClass
 	//'run-while' NOT Quit loop
 	while (rateSelection != 'Q')
 	{	
-		//assignment statement to assign a valid selection value to sales
-		itemSelection = validateitemMenu(input);	
+	     //assignment statement to assign a valid selection value to sales
+	     itemSelection = validateitemMenu(input);	
 		
 		while (itemSelection != 'R')
 		{	
 		//assignment statement to assign a valid selection value to sales
-			howMany = validateHowMany(input);
+		howMany = validateHowMany(input);
 		
 		//process selection structure
 		if (itemSelection == 'A')
-			{
-			//assignment statement
-			itemName = ITEM_NAME_PREMIUM;
-			itemPrice = ITEM_PRICE_PREMIUM;
-			premiumCount++;
-			}// END OF if
+		{
+		//assignment statement
+		itemName = ITEM_NAME_PREMIUM;
+		itemPrice = ITEM_PRICE_PREMIUM;
+		premiumCount++;
+		}// END OF if
 				
-			else if (itemSelection == 'B')
-			{
-			//assignment statement
-			itemName = ITEM_NAME_SPECIAL;
-			itemPrice = ITEM_PRICE_SPECIAL;
-			specialCount++;
-			}// END OF else if
-			
-			else
-			{
-			//assignment statement
-			itemName = ITEM_NAME_BASIC;
-			itemPrice = ITEM_PRICE_BASIC;
-			basicCount++;
-			}// END OF else 
+		else if (itemSelection == 'B')
+		{
+		//assignment statement
+		itemName = ITEM_NAME_SPECIAL;
+		itemPrice = ITEM_PRICE_SPECIAL;
+		specialCount++;
+		}// END OF else if
+		
+		else
+		{
+		//assignment statement
+		itemName = ITEM_NAME_BASIC;
+		itemPrice = ITEM_PRICE_BASIC;
+		basicCount++;
+		}// END OF else 	
 		
 		
 		//PROCESS section
 		//process selection structure
 		if (rateSelection == 'A')
-			{
-			//assignment statement
-			discountName = DISCOUNT_NAME_MEMBER;
-			discountRate = DISCOUNT_RATE_MEMBER;
-			memberCount++;
-			}// END OF if
+		{
+		//assignment statement
+		discountName = DISCOUNT_NAME_MEMBER;
+		discountRate = DISCOUNT_RATE_MEMBER;
+		memberCount++;
+		}// END OF if	
 				
-			else if (rateSelection == 'B')
-			{
-			//assignment statement
-			discountName = DISCOUNT_NAME_SENIOR;
-			discountRate = DISCOUNT_RATE_SENIOR;
-			seniorCount++;
-			}// END OF else if
+		else if (rateSelection == 'B')
+		{
+		//assignment statement
+		discountName = DISCOUNT_NAME_SENIOR;
+		discountRate = DISCOUNT_RATE_SENIOR;
+		seniorCount++;
+		}// END OF else if
 			
-			else
-			{
-			//assignment statement
-			discountName = DISCOUNT_NAME_NONE;
-			discountRate = DISCOUNT_RATE_NONE;
-			noDiscountCount++;
-			}// END OF else 
+		else
+		{
+		//assignment statement
+		discountName = DISCOUNT_NAME_NONE;
+		discountRate = DISCOUNT_RATE_NONE;
+		noDiscountCount++;
+		}// END OF else 
 		
 		//assignment statement to calculate all sales value
 		discountAmount = itemPrice * discountRate;
@@ -159,45 +159,46 @@ public class PercivalMainClass
 		displayOrderTotal (userName, subTotal, tax, totalCost);
 		subTotal = RESET_VALUE;
 		rateSelection = validateMainMenu(input);
-		//output selection structure
-		if (grandTotal > 0.0)
-		{
-			}//END OF if
 		}//END OF the main method
 		//close Scanner
 		input.close();
-			//report
-			displayFinalReport(memberCount, seniorCount, noDiscountCount, premiumCount, specialCount, basicCount, grandTotal);
-			//display the farewell message
-			System.out.println();	   
-			System.out.println("***** ***** ***** ***** ****  **** ***** ***** *****");
-			System.out.println(userName + ", !THANK YOU FOR YOUR BUSSINES!.");
-			System.out.println("We Hope To See You Soon");
-			System.out.println("We Wish You Have A Nice Day");
+		//output selection structure
+		if (grandTotal > 0.0)
+		{
+		}//END OF if
+		
+		//report
+		displayFinalReport(memberCount, seniorCount, noDiscountCount, premiumCount, specialCount, basicCount, grandTotal);
+		//display the farewell message
+		System.out.println();	   
+		System.out.println("***** ***** ***** ***** ****  **** ***** ***** *****");
+		System.out.println(userName + ", !THANK YOU FOR YOUR BUSINESS!.");
+		System.out.println("We Hope To See You Soon");
+		System.out.println("We Wish You Have A Nice Day");
 		}//Void method section
 		//void method to display the welcome banner
 		public static void displayWelcomeBanner()
 		{
-			//welcome banner
-			System.out.println("----------------------------------------------------");
-			System.out.println("Welcome To DISCOUNT program!");
-			System.out.println("The Discount Menu will help you with this purchase,");
-			System.out.println("and give you a formated and detailed report.");
-			System.out.println("----------------------------------------------------");
-			return;
+		//welcome banner
+		System.out.println("----------------------------------------------------");
+		System.out.println("Welcome To DISCOUNT program!");
+		System.out.println("The Discount Menu will help you with this purchase,");
+		System.out.println("and give you a formated and detailed report.");
+		System.out.println("----------------------------------------------------");
+		return;
 		}//END OF void method to display the welcome banner
 		
 				
 		//void method to display the Farewell Message
 		public static void displayFarewellMessage()
 		{
-			//farewell message		
-			System.out.println();	   
-		    System.out.println("***** ***** ***** *****  **** **** ***** ***** *****");
-		  	System.out.println("!THANK YOU FOR YOUR BUSSINES!.");
-		  	System.out.println("We Hope To See You Soon");
-		  	System.out.println("We Wish You Have A Nice Day");
-			return;
+		//farewell message		
+		System.out.println();	   
+		System.out.println("***** ***** ***** *****  **** **** ***** ***** *****");
+		System.out.println("!THANK YOU FOR YOUR BUSSINES!.");
+		System.out.println("We Hope To See You Soon");
+		System.out.println("We Wish You Have A Nice Day");
+		return;
 		}//END OF void method to display the farewell message
 		
 		
@@ -240,7 +241,6 @@ public class PercivalMainClass
 		return;
 		}//END OF validation method for display Order Total report
 		
-		
 		//void method to display the Final report
 		public static void displayFinalReport(int borrowedMemberCount, int borrowedSeniorCount, int borrowedNoDiscountCount, int borrowedPremiumCount, int borrowedSpecialCount, int borrowedBasicCount, double borrowedGrandTotal)
 		{
@@ -262,175 +262,167 @@ public class PercivalMainClass
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.printf("%-26s%9s%8.2f\n", "GRAND TOTAL", "$", borrowedGrandTotal);
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
 		return;
 		}//END OF validation method for final Report
-			
-		//void method to display main menu
+		
+		//void method to display Main Menu
 		public static void displayMainMenu()
 		{
-			
-			//menu
-			System.out.println("----------------------------------------------------");
-			//menu title
+		    //menu
+		    System.out.println("----------------------------------------------------");
+		    //menu title
 		    System.out.println("DISCOUNT MENU");
 		    System.out.println("----------------------------------------------------");
 		    //menu options
-			System.out.printf("%1s%1s\n", "[A] for ", DISCOUNT_NAME_MEMBER);
-			System.out.printf("%1s%1s\n", "[B] for ", DISCOUNT_NAME_SENIOR);
-			System.out.printf("%1s%1s\n", "[C] for ", DISCOUNT_NAME_NONE);
-			System.out.printf("%1s%5s\n","[Q] to", DISCOUNT_NAME_QUIT, "to Quit");
-			System.out.println("----------------------------------------------------");
-			System.out.print("Enter Your Selection Here: ");
-			//assignment statement
-			return;
-		}//END OF validation method for display main menu
-		
-		//void method to display item menu
-		public static void validateitemMenu()
-		{
-			//menu
-			System.out.println("----------------------------------------------------");
-			//menu title
-		    System.out.println("ITEM MENU");
+		    System.out.printf("%1s%7s%28s%1s\n","[A] for",DISCOUNT_NAME_MEMBER, DISCOUNT_RATE_MEMBER * 100, "%");
+	            System.out.printf("%1s%7s%28s%1s\n","[B] for",DISCOUNT_NAME_SENIOR, DISCOUNT_RATE_SENIOR * 100, "%");
+		    System.out.printf("%1s%12s%23s%1s\n","[C] for",DISCOUNT_NAME_NONE, DISCOUNT_RATE_NONE * 100, "%");
+		    System.out.printf("%1s%5s\n","[Q] to",DISCOUNT_NAME_QUIT, "to Quit");
 		    System.out.println("----------------------------------------------------");
-		   	//menu options
-		    System.out.printf("%1s%-1s%22s%8s\n","[A] ",ITEM_NAME_PREMIUM, "$ ", ITEM_PRICE_PREMIUM);
-		    System.out.printf("%1s%-1s%21s%8s\n","[B] ",ITEM_NAME_SPECIAL, "$ ", ITEM_PRICE_SPECIAL);
-		    System.out.printf("%1s%-1s%21s%8s\n","[C] ",ITEM_NAME_BASIC, "$ ", ITEM_PRICE_BASIC);
-		    System.out.printf("%1s%-1s%42s\n","[R] ","Return",  ITEM_NAME_RETURN);
-		    System.out.println("----------------------------------------------------");
-			//menu prompt
 		    System.out.print("Enter Your Selection Here: ");
-		    //assignment statement
 		    return;
-		}//END OF validation method for display item menu
+		}//END OF validation method for display Main Menu
 		
-		//VR method section
-		//VR method to validate the Main Menu
-		//INPUT AND PROMPTS
-		public static String getUserName(Scanner borrowedInput)
+		//void method to display Item Menu
+		public static void displayItemMenu()
 		{
-			String localUserName = " ";
-			localUserName = borrowedInput.next();
-			return localUserName;
-		}//End Validation localUserName
-		
-		public static char validateMainMenu(Scanner borrowedInput)
-		{
-			
-			char localSelection = ' ';
-			//menu
-			System.out.println("----------------------------------------------------");
-			//menu title
-		    System.out.println("DISCOUNT MENU");
+		     //menu
 		    System.out.println("----------------------------------------------------");
-		    //menu options
-			System.out.printf("%1s%1s\n", "[A] for ", DISCOUNT_NAME_MEMBER);
-			System.out.printf("%1s%1s\n", "[B] for ", DISCOUNT_NAME_SENIOR);
-			System.out.printf("%1s%1s\n", "[C] for ", DISCOUNT_NAME_NONE);
-			System.out.printf("%1s%5s\n","[Q] to ", DISCOUNT_NAME_QUIT);
-			System.out.println("----------------------------------------------------");
-			System.out.print("Enter Your Selection Here: ");
-			//assignment statement
-			localSelection = borrowedInput.next().toUpperCase().charAt(0);
-			
-			//repetition structure
-			//validation loop for local selection
-			while (localSelection != 'A' && localSelection != 'B' && localSelection != 'C' && localSelection != 'Q')
-			{
-				//SIMPLE, SINGLE STATEMENT, ERROR MESSAGE
-				System.out.println("\n---Invalid Selection.---\n");
-				//menu
-				System.out.println("----------------------------------------------------");
-				//menu title
-				System.out.println("DISCOUNT MENU");
-				System.out.println("----------------------------------------------------");
-				//menu options
-				System.out.printf("%1s%1s\n", "[A] for ", DISCOUNT_NAME_MEMBER);
-				System.out.printf("%1s%1s\n", "[B] for ", DISCOUNT_NAME_SENIOR);
-				System.out.printf("%1s%1s\n", "[C] for ", DISCOUNT_NAME_NONE);
-				System.out.printf("%1s%5s\n","[Q] to ", DISCOUNT_NAME_QUIT);
-				System.out.println("----------------------------------------------------");
-				System.out.print("Enter Your Selection Here: ");
-				//assignment statement
-				localSelection = borrowedInput.next().toUpperCase().charAt(0);
-				}//END OF validation loop - local selection
-			return localSelection;
-		}//END OF run-while 
-	
-		public static char validateitemMenu(Scanner borrowedInput)
-		{
-			char localSelection = ' ';
-			//menu
-			System.out.println("----------------------------------------------------");
-			//menu title
+		    //menu title
 		    System.out.println("ITEM MENU");
 		    System.out.println("----------------------------------------------------");
-		   	//menu options
+		    //menu options
 		    System.out.printf("%1s%-1s%22s%8s\n","[A] ",ITEM_NAME_PREMIUM, "$ ", ITEM_PRICE_PREMIUM);
 		    System.out.printf("%1s%-1s%21s%8s\n","[B] ",ITEM_NAME_SPECIAL, "$ ", ITEM_PRICE_SPECIAL);
 		    System.out.printf("%1s%-1s%21s%8s\n","[C] ",ITEM_NAME_BASIC, "$ ", ITEM_PRICE_BASIC);
 		    System.out.printf("%1s%-1s%42s\n","[R] ","Return", ITEM_NAME_RETURN);
 		    System.out.println("----------------------------------------------------");
-			//menu prompt
+		    //menu prompt
 		    System.out.print("Enter Your Selection Here: ");
-		    //assignment statement
-		    localSelection = borrowedInput.next().toUpperCase().charAt(0);
-		    	
-			//repetition structure
-		    //validation loop for item selection
-		    while (localSelection != 'A' && localSelection != 'B' && localSelection != 'C' && localSelection != 'R')
-		    {
-		    	//SINGLE STATEMEN, ERROR MESSAGE
-		    	System.out.println("\n---Invalid Selection.---\n");
-		    	//menu
-		    	System.out.println("----------------------------------------------------");
-		    	//menu title
-		    	System.out.println("ITEM MENU");
-		    	System.out.println("----------------------------------------------");
-		   		//menu options
-		    	System.out.printf("%1s%-1s%22s%8s\n","[A] ",ITEM_NAME_PREMIUM, "$ ", ITEM_PRICE_PREMIUM);
-		    	System.out.printf("%1s%-1s%21s%8s\n","[B] ",ITEM_NAME_SPECIAL, "$ ", ITEM_PRICE_SPECIAL);
-		    	System.out.printf("%1s%-1s%21s%8s\n","[C] ",ITEM_NAME_BASIC, "$ ", ITEM_PRICE_BASIC);
-			    System.out.printf("%1s%-1s%42s\n","[R] ","Return", ITEM_NAME_RETURN);
-		    	System.out.println("\n----------------------------------------------------");
-		       	//menu prompt
-		    	System.out.print("Enter Your Selection Here: ");
-		    	localSelection = borrowedInput.next().toUpperCase().charAt(0);
-		    }//END OF validation loop for Item Menu
-			return localSelection;
+		    return;
+		}//END OF validation method for display Item Menu
+		//VR method section
+		//VR method to validate the Main Menu
+		//INPUT AND PROMPTS
+		public static String getUserName(Scanner borrowedInput)
+		{
+		String localUserName = " ";
+		localUserName = borrowedInput.next();
+		return localUserName;
+		}//End Validation localUserName
+		
+		public static char validateMainMenu(Scanner borrowedInput)
+		{
+		char localSelection = ' ';
+		//menu
+		System.out.println("----------------------------------------------------");
+		//menu title
+		System.out.println("DISCOUNT MENU");
+		System.out.println("----------------------------------------------------");
+		//menu options
+		System.out.printf("%1s%7s%28s%1s\n","[A] for",DISCOUNT_NAME_MEMBER, DISCOUNT_RATE_MEMBER * 100, "%");
+		System.out.printf("%1s%7s%28s%1s\n","[B] for",DISCOUNT_NAME_SENIOR, DISCOUNT_RATE_SENIOR * 100, "%");
+		System.out.printf("%1s%12s%23s%1s\n","[C] for",DISCOUNT_NAME_NONE, DISCOUNT_RATE_NONE * 100, "%");
+		System.out.printf("%1s%5s\n","[Q] to",DISCOUNT_NAME_QUIT, "to Quit");
+		System.out.println("----------------------------------------------------");
+		System.out.print("Enter Your Selection Here: ");
+		//assignment statement
+		localSelection = borrowedInput.next().toUpperCase().charAt(0);
+			
+		//repetition structure
+		//validation loop for local selection
+		while (localSelection != 'A' && localSelection != 'B' && localSelection != 'C' && localSelection != 'Q')
+		{
+		//SIMPLE, SINGLE STATEMENT, ERROR MESSAGE
+		System.out.println("\n---Invalid Selection.---\n");
+		//menu
+		System.out.println("----------------------------------------------------");
+		//menu title
+		System.out.println("DISCOUNT MENU");
+		System.out.println("----------------------------------------------------");
+		//menu options
+		System.out.printf("%1s%7s%28s%1s\n","[A] for",DISCOUNT_NAME_MEMBER, DISCOUNT_RATE_MEMBER * 100, "%");
+		System.out.printf("%1s%7s%28s%1s\n","[B] for",DISCOUNT_NAME_SENIOR, DISCOUNT_RATE_SENIOR * 100, "%");
+		System.out.printf("%1s%12s%23s%1s\n","[C] for",DISCOUNT_NAME_NONE, DISCOUNT_RATE_NONE * 100, "%");
+		System.out.printf("%1s%5s\n","[Q] to",DISCOUNT_NAME_QUIT, "to Quit");
+		System.out.println("----------------------------------------------------");
+		System.out.print("Enter Your Selection Here: ");
+		//assignment statement
+		localSelection = borrowedInput.next().toUpperCase().charAt(0);
+		}//END OF validation loop - local selection
+		return localSelection;
+		}//END OF run-while 
+	
+		public static char validateitemMenu(Scanner borrowedInput)
+		{
+		char localSelection = ' ';
+		//menu
+		System.out.println("----------------------------------------------------");
+		//menu title
+		System.out.println("ITEM MENU");
+		System.out.println("----------------------------------------------------");
+		//menu options
+		System.out.printf("%1s%-1s%22s%8s\n","[A] ",ITEM_NAME_PREMIUM, "$ ", ITEM_PRICE_PREMIUM);
+		System.out.printf("%1s%-1s%21s%8s\n","[B] ",ITEM_NAME_SPECIAL, "$ ", ITEM_PRICE_SPECIAL);
+		System.out.printf("%1s%-1s%21s%8s\n","[C] ",ITEM_NAME_BASIC, "$ ", ITEM_PRICE_BASIC);
+		System.out.printf("%1s%-1s%42s\n","[R] ","Return", ITEM_NAME_RETURN);
+		System.out.println("----------------------------------------------------");
+		//menu prompt
+		System.out.print("Enter Your Selection Here: ");
+		//assignment statement
+		localSelection = borrowedInput.next().toUpperCase().charAt(0);
+		   	
+		//repetition structure
+		//validation loop for item selection
+		while (localSelection != 'A' && localSelection != 'B' && localSelection != 'C' && localSelection != 'R')
+		{
+		//SINGLE STATEMEN, ERROR MESSAGE
+		System.out.println("\n---Invalid Selection.---\n");
+		//menu
+		System.out.println("----------------------------------------------------");
+		//menu title
+		System.out.println("ITEM MENU");
+		System.out.println("----------------------------------------------");
+		//menu options
+		System.out.printf("%1s%-1s%22s%8s\n","[A] ",ITEM_NAME_PREMIUM, "$ ", ITEM_PRICE_PREMIUM);
+		System.out.printf("%1s%-1s%21s%8s\n","[B] ",ITEM_NAME_SPECIAL, "$ ", ITEM_PRICE_SPECIAL);
+		System.out.printf("%1s%-1s%21s%8s\n","[C] ",ITEM_NAME_BASIC, "$ ", ITEM_PRICE_BASIC);
+		System.out.printf("%1s%-1s%42s\n","[R] ","Return", ITEM_NAME_RETURN);
+		System.out.println("\n----------------------------------------------------");
+		//menu prompt
+		System.out.print("Enter Your Selection Here: ");
+		localSelection = borrowedInput.next().toUpperCase().charAt(0);
+		}//END OF validation loop for Item Menu
+		return localSelection;
 		}//END OF run-while
 		
 		//VR method to validate the value how many
 		public static int validateHowMany(Scanner borrowedInput)
 		{
-			int localHowMany = 0;
-			//output border
-			System.out.println("\n----------------------------------------------------");
-			//prompt
-			System.out.println("Enter Quantity:");
-			//assignment statement
-			localHowMany = borrowedInput.nextInt();
-			System.out.println("\n----------------------------------------------------");
+		int localHowMany = 0;
+		//output border
+		System.out.println("\n----------------------------------------------------");
+		//prompt
+		System.out.println("Enter Quantity:");
+		//assignment statement
+		localHowMany = borrowedInput.nextInt();
+		System.out.println("\n----------------------------------------------------");
 
-			//repetition structure
-			//validation loop for howMany
-			while (localHowMany <= 0)
-			{
-				//Border
-				System.out.println("\n----------------------------------------------------");
-				//SIMPLE, SINGLE STATEMENT, ERROR MESSAGE
-				System.out.println("\n~~~Invalid Value.~~~\n");
-				//Border
-				System.out.println("----------------------------------------------------");
-				//prompt users for a value for localHowMany
-				System.out.print("Enter Quantity");
-				//assignment statement
-				localHowMany = borrowedInput.nextInt();
-			}//END OF validation loop - for How many	
-			return  localHowMany;
+		//repetition structure
+		//validation loop for howMany
+		while (localHowMany <= 0)
+		{
+		//Border
+		System.out.println("\n----------------------------------------------------");
+		//SIMPLE, SINGLE STATEMENT, ERROR MESSAGE
+		System.out.println("\n~~~Invalid Value.~~~\n");
+		//Border
+		System.out.println("----------------------------------------------------");
+		//prompt users for a value for localHowMany
+		System.out.print("Enter Quantity");
+		//assignment statement
+		localHowMany = borrowedInput.nextInt();
+		}//END OF validation loop - for How many	
+		return  localHowMany;
 		}//END OF validation method for how Many
 	}//END class Main
-
-	
