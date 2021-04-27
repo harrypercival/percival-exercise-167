@@ -9,7 +9,7 @@
 	//Item Report: (Item Name, original price, discount type and rate, discount amount, price discounted, quantity, purchase amount, sub total) 
 	//Order Report: (User name, sub total, tax, total cost)
 	//Final Report: (Count discount type selected, count of  item type and grand total)
-	//STARDATE: 04/19/2021
+	//STARDATE: 04/27/2021
 package edu.cpt167.percival.exercise6;
 
 import java.util.Scanner;
